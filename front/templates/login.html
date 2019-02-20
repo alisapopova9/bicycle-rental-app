@@ -1,0 +1,18 @@
+{{> header}}
+	<h3>Вход</h3>
+	<form method="post">
+		<label for="login">Логин</label>
+		<input type="text" class="" id="login" name="login" value="{{ login }}">
+
+		<label for="password">Пароль</label>
+		<input type="password" class="" id="password" name="password">
+
+		{{#isLoginError}}
+			<p>
+				Неверные логин или пароль
+			</p>
+		{{/isLoginError}}
+		<button type="submit">Войти</button>
+		<a href="/registration">или зарегистрироваться</a>
+	</form>
+{{> footer}}

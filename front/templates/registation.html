@@ -1,0 +1,25 @@
+{{> header}}
+	<h3>Регистрация</h3>
+	<form method="post">
+		<label for="login">Логин</label>
+		<input type="text" class="" id="login" name="login" value="{{ login }}">
+
+		<label for="password1">Пароль</label>
+		<input type="password" class="" id="password1" name="password1">
+
+		<label for="password2">Повторите пароль</label>
+		<input type="password" class="" id="password2" name="password2">
+		{{#notEqualPasswordsError}}
+			<p>
+				Пароли не совпадают
+			</p>
+		{{/notEqualPasswordsError}}
+		{{#isEmptyValuesError}}
+			<p>
+				Заполните все поля
+			</p>
+		{{/isEmptyValuesError}}
+		<button type="submit">Зарегистрироваться</button>
+	  <a href="/login">или войти</a>
+	</form>
+{{> footer}}

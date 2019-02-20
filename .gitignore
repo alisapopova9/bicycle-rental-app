@@ -1,0 +1,5 @@
+node_modules
+users
+server/models/db
+dist
+.idea
