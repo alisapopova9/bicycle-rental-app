@@ -1,20 +1,20 @@
 {{> header}}
-<div>
+<div class="catalog-page">
   <!--
     При помощи шаблонизатора mustache выведи заголовок каталога.
     Если выбран пункт проката, то в переменной pointInfo будет информация о выбранном пункте
     и в таком случае заголовок должен быть таким <h3>Каталог велосипедов по адресу %адрес пункта%</h3>
     если пункт не выбран, то такой заголовок <h3>Каталог велосипедов</h3>
   -->
-  <h3>Каталог велосипедов {{#pointInfo}}по адресу {{pointInfo.address}}{{/pointInfo}}</h3>
+  <h3 class="section-header">Каталог велосипедов {{#pointInfo}}по адресу {{pointInfo.address}}{{/pointInfo}}</h3>
 
-  <div>
+  <div class="catalog__content">
     <div id="bikeList">
       <!-- Здесь необходимо отобразить карточки велосипедов -->
-
     </div>
     <div>
-      <ul>
+      <h5 class="sub-header">Пункты выдачи</h5>
+      <ul class="pointsList">
         <!--
           При помощи шаблонизатора mustache выведи пункты проката из массива pointersList
           <li><a href="/catalog/ID пункта">Адрес пункта</a></li>
@@ -22,14 +22,15 @@
           <li class="active"><a href="/catalog/ID пункта">Адрес пункта</a></li>
         -->
         {{#pointersList}}
-          <li class="{{#isActive}}active{{/isActive}}"><a href="/catalog/{{_id}}">{{address}}</a></li>
+          <li class="{{#isActive}}active{{/isActive}} point"><a href="/catalog/{{_id}}" class="point__link">{{address}}</a></li>
         {{/pointersList}}
+        <li class="point"><a href="/catalog" class="point__link">Все пункты</a></li>
       </ul>
     </div>
   </div>
 
-  <div id="loadMore" class="hidden">
-    <button type="button">Загрузить ещё</button>
+  <div id="loadMore" class="hidden loadMore">
+    <button type="button" class="button button_hovered button_bigger">Загрузить ещё</button>
   </div>
 
   <script src="../js/api.js"></script>
