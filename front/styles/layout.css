@@ -20,6 +20,78 @@ html, body {
   flex-grow: 2;
 }
 
+.main {
+  position: absolute;
+  bottom: 61px;
+  top: 68px;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 61px - 68px);
+  background: url('../images/background.png') no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  cursor: default;
+}
+.main__inner {
+  height: 100%;
+  background: rgba(22, 0, 69, 0.42);
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding-top: 100px;
+}
+.main-inner__nav {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding-left: 22px;
+}
+.main__title {
+  margin: 0;
+  padding: 0;
+  color: #FFFFFF;
+  line-height: 60px;
+  font-size: 48px;
+  font-weight: normal;
+  width: 350px;
+}
+.main__about {
+  width: 750px;
+  color: #FFFFFF;
+  font-weight: normal;
+  line-height: 30px;
+  font-size: 18px;
+}
+.main__buttons {
+  display: flex;
+  margin-top: 13px;
+}
+.button {
+  background: #3C1491;
+  height: 38px;
+  border: 1px solid #3C1491;
+  border-radius: 1px;
+  color: #fff;
+  line-height: 20px;
+  font-size: 16px;
+  text-align: center;
+  padding: 9px 15px;
+  cursor: pointer;
+}
+.button_hovered:hover {
+  background: #361173;
+  border: 1px solid #361173;
+}
+.button:focus {
+  outline: none;
+}
+.button:active {
+  box-shadow: 0 0 5px rgba(0, 0, 0, .2) inset;
+}
+.button + .button {
+  margin-left: 27px;
+}
+
+
 .header {
   background-color: #3C1491;
   color: #fff;
