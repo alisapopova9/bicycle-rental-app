@@ -92,7 +92,11 @@ html, body {
 }
 .button_bigger {
   text-align: center;
-  padding: 9px 35px;
+  padding: 9px 40px;
+}
+.load-more:disabled {
+  background: rgb(162, 162, 162);
+  border: 1px solid #949494;
 }
 
 .header {
@@ -127,15 +131,15 @@ html, body {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-
+  cursor: default;
 }
 .section-header {
   margin: 0;
   padding: 0;
   color: #333;
   line-height: 46px;
-  font-size: 36px;
-  font-weight: 500;
+  font-size: 37px;
+  font-weight: 600;
 }
 .sub-header {
   line-height: 30px;
@@ -184,11 +188,18 @@ html, body {
   border: 1px solid #CECECE;
 }
 .bike__name {
+  display: block;
   width: 370px;
   line-height: 26px;
   font-size: 18px;
+  font-weight: 600;
   height: 50px;
   margin: 0;
+  cursor: pointer;
+  text-decoration: none;
+}
+.bike__name:hover {
+  text-decoration: underline;
 }
 .bike__cost {
   box-sizing: border-box;
@@ -226,9 +237,6 @@ html, body {
 .point:not(:last-of-type){
   margin-bottom: 15px;
 }
-.point:hover {
-
-}
 .point__link {
   text-decoration: none;
   color: #333;
@@ -248,4 +256,26 @@ html, body {
 
 .hidden {
   display: none;
+}
+
+#mapContainer {
+  min-width: 900px;
+  width: 100%;
+  max-width: 1170px;
+  height: 600px;
+  margin-top: 40px;
+}
+.balloon-container {
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  margin: 20px 70px 20px 20px;
+
+  line-height: 24px;
+  font-size: 16px;
+  font-weight: 500;
+}
+.button_a {
+  margin-top: 20px;
+  width: 200px;
 }

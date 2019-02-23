@@ -2,8 +2,10 @@
 function init() {
   let page = 1;
   // вызови функцию loadCatalog для загрузки первой страницы каталога
-  loadCatalog(page);
-  page++;
+  if (document.URL.split("/").length > 4) {
+    loadCatalog(page);
+    page++;
+  }
   // Реализуй и установи обработчик нажатия на кнопку "Загрузить еще"
   const buttonParent = document.getElementById("loadMore");
   const button = buttonParent.querySelector("button");
@@ -45,7 +47,7 @@ function appendCatalog(items) {
 
     let bikeImageContainer = document.createElement("div");
     let bikeImage = document.createElement("img");
-    let bikeName = document.createElement("h4");
+    let bikeName = document.createElement("a");
     let bikeCost = document.createElement("div");
     let rentButton = document.createElement("button");
 
