@@ -3,10 +3,8 @@ function init() {
   let page = 1;
   // вызови функцию loadCatalog для загрузки первой страницы каталога
 
-  if (document.URL.split("/").length > 4) {
     loadCatalog(page);
     page++;
-  }
 
   // Реализуй и установи обработчик нажатия на кнопку "Загрузить еще"
   const buttonParent = document.getElementById("loadMore");
@@ -100,11 +98,12 @@ function enableButtonLoadMore() {
 
   function getPointId() {
   // сделай определение id выбранного пункта проката
-    let url = document.URL;
-    if (url.substring(-1) === '/') {
-      url = url.substring(0, url.length - 1);
-    }
-    return url.substring(url.lastIndexOf("/") + 1);
+    const url = document.URL;
+
+    let urlPieces = url.split('/');
+    let index = urlPieces.indexOf('catalog');
+
+    return urlPieces[index + 1];
 }
 
 document.addEventListener('DOMContentLoaded', init);
