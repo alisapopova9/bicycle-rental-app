@@ -2,6 +2,7 @@
 function init() {
   let page = 1;
   // вызови функцию loadCatalog для загрузки первой страницы каталога
+
   if (document.URL.split("/").length > 4) {
     loadCatalog(page);
     page++;
@@ -20,13 +21,10 @@ function init() {
 function loadCatalog(page) {
   // Здесь необходимо сделать загрузку каталога (api.getBikes)
   // и передать полученные данные в функции appendCatalog и showButtonLoadMore
-  const url = document.URL;
-  const id = url.substring(url.lastIndexOf("/") + 1);
-  console.log(id);
+  const id = getPointId();
   let itemsPromise = api.getBikes(id, page);
   let list, hasMore;
   itemsPromise.then((bikesList) => {
-    console.log(bikesList);
     list = bikesList.bikesList;
     hasMore = bikesList.hasMore;
     appendCatalog(list);
@@ -99,11 +97,10 @@ function enableButtonLoadMore() {
   loadMoreButton.disabled = false;
 }
 
-function getPointId() {
+  function getPointId() {
   // сделай определение id выбранного пункта проката
-  return ''
+    const url = document.URL;
+    return url.substring(url.lastIndexOf("/") + 1);
 }
-
-// const delay = ms => new Promise(resolve => setTimeout(resolve, 3000));
 
 document.addEventListener('DOMContentLoaded', init);
