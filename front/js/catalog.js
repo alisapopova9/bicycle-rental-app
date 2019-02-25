@@ -7,6 +7,7 @@ function init() {
     loadCatalog(page);
     page++;
   }
+
   // Реализуй и установи обработчик нажатия на кнопку "Загрузить еще"
   const buttonParent = document.getElementById("loadMore");
   const button = buttonParent.querySelector("button");
@@ -99,7 +100,10 @@ function enableButtonLoadMore() {
 
   function getPointId() {
   // сделай определение id выбранного пункта проката
-    const url = document.URL;
+    let url = document.URL;
+    if (url.substring(-1) === '/') {
+      url = url.substring(0, url.length - 1);
+    }
     return url.substring(url.lastIndexOf("/") + 1);
 }
 
