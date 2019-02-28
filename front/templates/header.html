@@ -15,8 +15,14 @@
 			<div class="container">
 				<div class="header__content">
 					<a href="/" class="logo"></a>
+          {{^isLogin}}
 					<a href="/login" class="header__link">Войти</a>
 					<a href="/registration" class="header__link">Зарегистрироваться</a>
+          {{/isLogin}}
+          {{#isLogin}}
+          <a href="/lk" class="header__link">Личный кабинет</a>
+          <a href="/logout" class="header__link">Выйти</a>
+          {{/isLogin}}
 				</div>
 			</div>
 	  </div>

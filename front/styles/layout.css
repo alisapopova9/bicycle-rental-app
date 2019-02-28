@@ -255,7 +255,7 @@ html, body {
 }
 
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 #mapContainer {
@@ -278,6 +278,9 @@ html, body {
 .button_a {
   margin-top: 20px;
   width: 200px;
+}
+.card-req-button {
+  padding: 9px 22px;
 }
 
 .card-req {
@@ -304,14 +307,24 @@ html, body {
   margin-left: 16px;
 }
 .error-tooltip {
-  width: 230px;
+  box-sizing: border-box;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #E30000;
+  width: 250px;
   height: 50px;
-  background: grey;
+  padding: 5px 20px;
+  background: white;
   position: absolute;
-  top: -70%;
+  top: -14%;
   left: 100%;
   border-radius: 2px;
-  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }
 .error-tooltip::before {
   position: absolute;
@@ -321,8 +334,41 @@ html, body {
   width: 0;
   height: 0;
   border-top: 8px solid transparent;
-  border-right: 17px solid grey;
+  border-right: 17px solid white;
   border-bottom: 8px solid transparent;
+  z-index: 1;
+}
+.error-tooltip::after {
+  position: absolute;
+  content: '';
+  top: 35%;
+  left: -16px;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-right: 19px solid rgba(0, 0, 0, 0.1);;
+  border-bottom: 10px solid transparent;
+  z-index: -1;
+
+}
+.input {
+  width: 370px;
+  line-height: 20px;
+  padding: 10px;
+  border: 1px solid #CECECE;
+  font-size: 17px;
+}
+.label {
+  margin-bottom: 5px;
+  line-height: 26px;
+  font-size: 18px;
+  font-weight: 600;
+}
+.login {
+  display: flex;
+  flex-direction: column;
+  margin-top: 60px;
+  align-items: center;
 }
 
 

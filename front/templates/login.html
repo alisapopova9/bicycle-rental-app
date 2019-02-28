@@ -1,18 +1,24 @@
 {{> header}}
-	<h3>Вход</h3>
-	<form method="post">
-		<label for="login">Логин</label>
-		<input type="text" class="" id="login" name="login" value="{{ login }}">
+<div class="login">
+  <h3 class="section-header">Вход</h3>
+  <form method="post">
+    <div class="input-block">
+      <label for="login" class="label">Логин</label>
+      <input type="text" class="input" id="login" name="login" value="{{ login }}">
+    </div>
 
-		<label for="password">Пароль</label>
-		<input type="password" class="" id="password" name="password">
+    <div class="input-block">
+      <label for="password" class="label">Пароль</label>
+      <input type="password" class="input" id="password" name="password">
+    </div>
 
-		{{#isLoginError}}
-			<p>
-				Неверные логин или пароль
-			</p>
-		{{/isLoginError}}
-		<button type="submit">Войти</button>
-		<a href="/registration">или зарегистрироваться</a>
-	</form>
+    {{#isLoginError}}
+    <p>
+      Неверные логин или пароль
+    </p>
+    {{/isLoginError}}
+    <button type="submit">Войти</button>
+    <a href="/registration">или зарегистрироваться</a>
+  </form>
+</div>
 {{> footer}}
