@@ -279,3 +279,50 @@ html, body {
   margin-top: 20px;
   width: 200px;
 }
+
+.card-req {
+  display: flex;
+  flex-direction: column;
+  margin-top: 60px;
+  align-items: center;
+}
+.card-req__input-area {
+  margin-bottom: 20px;
+  margin-top: 40px;
+}
+.input-block{
+  margin-bottom: 20px;
+}
+.input-container {
+  display: flex;
+}
+.label {
+  display: block;
+}
+.error-container {
+  position: relative;
+  margin-left: 16px;
+}
+.error-tooltip {
+  width: 230px;
+  height: 50px;
+  background: grey;
+  position: absolute;
+  top: -70%;
+  left: 100%;
+  border-radius: 2px;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+}
+.error-tooltip::before {
+  position: absolute;
+  top: 35%;
+  left: -16px;
+  content: '';
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-right: 17px solid grey;
+  border-bottom: 8px solid transparent;
+}
+
+
