@@ -304,7 +304,7 @@ html, body {
 }
 .error-container {
   position: relative;
-  margin-left: 16px;
+  margin-left: 9px;
 }
 .error-tooltip {
   box-sizing: border-box;
@@ -328,14 +328,14 @@ html, body {
 }
 .error-tooltip::before {
   position: absolute;
-  top: 35%;
-  left: -16px;
+  top: 0%;
+  left: -9px;
   content: '';
   width: 0;
   height: 0;
-  border-top: 8px solid transparent;
-  border-right: 17px solid white;
-  border-bottom: 8px solid transparent;
+  border-top: 25px solid transparent;
+  border-right: 24px solid white;
+  border-bottom:23px solid transparent;
   z-index: 1;
 }
 .error-tooltip::after {
@@ -352,7 +352,8 @@ html, body {
 
 }
 .input {
-  width: 370px;
+  box-sizing: border-box;
+  width: 369px;
   line-height: 20px;
   padding: 10px;
   border: 1px solid #CECECE;
@@ -370,5 +371,34 @@ html, body {
   margin-top: 60px;
   align-items: center;
 }
-
+.auth-error {
+  font-weight: 600;
+  line-height: 20px;
+  font-size: 16px;
+  color: #E30000;
+  margin: 20px 0;
+}
+.auth-button {
+  padding: 9px 27px;
+}
+.reg-button {
+  padding: 10px 29px;
+}
+.auth-form {
+  margin-top: 40px;
+}
+.link {
+  color: #0000FF;
+  text-decoration: none;
+  font-weight: 600;
+  line-height: 20px;
+  font-size: 16px;
+  margin-left: 15px;
+}
+.link:hover {
+  text-decoration: underline;
+}
+.link:visited {
+  color: #0000FF;
+}
 

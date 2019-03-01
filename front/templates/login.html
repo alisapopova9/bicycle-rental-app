@@ -1,7 +1,7 @@
 {{> header}}
 <div class="login">
   <h3 class="section-header">Вход</h3>
-  <form method="post">
+  <form method="post" class="auth-form">
     <div class="input-block">
       <label for="login" class="label">Логин</label>
       <input type="text" class="input" id="login" name="login" value="{{ login }}">
@@ -13,12 +13,12 @@
     </div>
 
     {{#isLoginError}}
-    <p>
+    <p class="auth-error">
       Неверные логин или пароль
     </p>
     {{/isLoginError}}
-    <button type="submit">Войти</button>
-    <a href="/registration">или зарегистрироваться</a>
+    <button type="submit" class="button button_hovered auth-button">Войти</button>
+    <a href="/registration" class="link">или зарегистрироваться</a>
   </form>
 </div>
 {{> footer}}

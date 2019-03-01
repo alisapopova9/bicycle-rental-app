@@ -113,7 +113,7 @@ function cardDateValidation(cardDateValue) {
   let year = value[1];
 
   if (value[0] !== '') {
-    if (month < 0 || month > 12) {
+    if (month <= 0 || month > 12) {
       renderError('error-2', ERROR_MESSAGES.invalidMonthValue, 'validity');
       return -1;
     }
