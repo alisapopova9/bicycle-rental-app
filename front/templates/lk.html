@@ -1,3 +1,61 @@
 {{> header}}
-
+<div class="lk">
+  <h3 class="section-header">Личный кабинет</h3>
+  <div class="user">{{login}}</div>
+</div>
+<div class="lk-container">
+  <div class="lk__content">
+    <div class="lk__orders">
+      <ul id="ordersList" class="ordersList">
+        {{#orderList}}
+        <li class="order">
+          <div class="bike__img-container">
+            <img src="../images/{{bike.img}}" alt="" class="bike__img">
+          </div>
+          <div class="order__about">
+            <h4 class="order__name">
+              {{bike.name}}
+            </h4>
+            <div class="order-data-container">
+              <div class="order__data">
+                Прошло времени - {{formatTotalTime}}
+              </div>
+              <div class="order__data">
+                Стоимость - {{totalCost}}
+              </div>
+            </div>
+            <a href="" id="backOrder-{{_id}}" class="button button_hovered button_link">Вернуть</a>
+          </div>
+        </li>
+        {{/orderList}}
+        {{^orderList}}
+        <li class="order">
+          Нет арендованных велосипедов
+        </li>
+        {{/orderList}}
+      </ul>
+    </div>
+    <div class="lk__card">
+      <div class="card-container">
+        <div class="card__header">
+          Реквизиты карты
+        </div>
+        <div class="card__reqs">
+          {{#cardRequisites}}
+          <div class="card__num">
+            {{cardRequisites.number}}
+          </div>
+          <div class="card__date">
+            {{cardRequisites.date}}
+          </div>
+          {{/cardRequisites}}
+          {{^cardRequisites}}
+          <div class="order-data-container">Нет данных</div>
+          {{/cardRequisites}}
+          <a href="/card-requisites" class="button button_hovered button_link">Изменить</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 {{> footer}}

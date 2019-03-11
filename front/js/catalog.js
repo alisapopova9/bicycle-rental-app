@@ -62,6 +62,9 @@ function appendCatalog(items) {
 
     rentButton.className += "button button_bigger button_hovered";
     rentButton.innerText = "Арендовать";
+    rentButton.onclick = function () {
+      window.location.href=`/order/${item._id}`
+    };
 
     bikeNode.appendChild(bikeImageContainer);
     bikeNode.appendChild(bikeName);

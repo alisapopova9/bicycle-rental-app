@@ -5,7 +5,7 @@
       <div class="input-block">
         <label for="card-num" class="label">Номер карты</label>
         <div class="input-container">
-          <input type="text" class="input" id="card-num" name="card-num">
+          <input type="text" class="input" id="card-num" name="card-num" value="{{cardRequisites.number}}">
           <div class="error-container">
             <div class="error-tooltip hidden" id="error-1"></div>
           </div>
@@ -14,7 +14,7 @@
       <div class="input-block">
         <label for="validity" class="label">Срок действия</label>
         <div class="input-container">
-          <input type="text" class="input" id="validity" name="validity">
+          <input type="text" class="input" id="validity" name="validity" value="{{cardRequisites.date}}">
           <div class="error-container">
             <div class="error-tooltip hidden" id="error-2"></div>
           </div>
@@ -23,7 +23,7 @@
       <div class="input-block">
         <label for="cvv" class="label">CVV</label>
         <div class="input-container">
-          <input type="text" class="input" id="cvv" name="cvv">
+          <input type="text" class="input" id="cvv" name="cvv" value="{{cardRequisites.cvv}}">
           <div class="error-container">
             <div class="error-tooltip hidden" id="error-3"></div>
           </div>

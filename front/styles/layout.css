@@ -402,3 +402,92 @@ html, body {
   color: #0000FF;
 }
 
+.lk {
+  display: flex;
+  align-items: baseline;
+  margin-top: 60px;
+  margin-bottom: 40px;
+}
+.button_link {
+  display: block;
+  width: 80px;
+  height: 20px;
+  text-decoration: none;
+}
+.lk-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+.lk__content {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.user {
+  margin-left: 30px;
+  line-height: 34px;
+  font-size: 24px;
+  color: #B0B0B0;
+}
+.ordersList {
+  padding: 0;
+  list-style: none;
+  margin: 0;
+  margin-right: 30px;
+}
+.order__about {
+  margin-left: 50px;
+}
+.order {
+  display: flex;
+}
+.order:not(:last-of-type) {
+  margin-bottom: 30px;
+}
+.order__name {
+  margin: 0;
+  line-height: 30px;
+  font-size: 24px;
+}
+.card__reqs {
+  box-sizing: border-box;
+  width: 370px;
+  padding-left: 30px;
+}
+.card-container {
+  box-sizing: border-box;
+  border: 1px solid #CECECE;
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+.card__header {
+  box-sizing: border-box;
+  font-weight: 400;
+  line-height: 30px;
+  font-size: 24px;
+  padding-left: 30px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #CECECE;
+}
+.card__num {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-weight: 500;
+  line-height: 26px;
+  font-size: 18px;
+}
+.card__date {
+  margin-bottom: 20px;
+}
+.order-data-container {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.order__data {
+  line-height: 20px;
+  font-size: 16px;
+}
+.order__data:not(:last-of-type) {
+  margin-bottom: 10px;
+}
