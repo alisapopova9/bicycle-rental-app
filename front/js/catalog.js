@@ -20,16 +20,36 @@ function init() {
 function loadCatalog(page) {
   // Здесь необходимо сделать загрузку каталога (api.getBikes)
   // и передать полученные данные в функции appendCatalog и showButtonLoadMore
-  const id = getPointId();
-  let itemsPromise = api.getBikes(id, page);
   let list, hasMore;
-  itemsPromise.then((bikesList) => {
-    list = bikesList.bikesList;
-    hasMore = bikesList.hasMore;
-    appendCatalog(list);
-    showButtonLoadMore(hasMore);
-  });
-
+  const id = getPointId();
+  const options = {
+    method: "GET",
+  };
+  let Url = '';
+  if (id !== undefined) {
+    Url = `/api/catalog/${id}?page=${page}`;
+  }
+  else {
+    Url = `/api/catalog/?page=${page}`;
+  }
+  fetch(Url, options)
+    .then(response => {
+      if (response.ok) {
+        return response.json();
+      }
+      else {
+        throw new Error('Запрос завершился неудачно');
+      }
+    })
+    .then(bikesList => {
+      list = bikesList.bikesList;
+      hasMore = bikesList.hasMore;
+      appendCatalog(list);
+      showButtonLoadMore(hasMore);
+    })
+    .catch(error => {
+      console.error(error);
+    });
 }
 
 function appendCatalog(items) {

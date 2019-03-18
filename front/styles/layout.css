@@ -414,6 +414,9 @@ html, body {
   height: 20px;
   text-decoration: none;
 }
+.button_change {
+  padding: 9px 22px;
+}
 .lk-container {
   display: flex;
   justify-content: space-between;
@@ -438,6 +441,7 @@ html, body {
 }
 .order__about {
   margin-left: 50px;
+  margin-top: 20px;
 }
 .order {
   display: flex;
@@ -473,7 +477,7 @@ html, body {
 .card__num {
   margin-top: 20px;
   margin-bottom: 10px;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 26px;
   font-size: 18px;
 }
@@ -491,3 +495,22 @@ html, body {
 .order__data:not(:last-of-type) {
   margin-bottom: 10px;
 }
+.order-info {
+  display: flex;
+}
+.order__bike-name {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: normal;
+  margin-bottom: 50px;
+}
+.order__text {
+  font-size: 18px;
+  line-height: 26px;
+  margin-bottom: 15px;
+}
+.order__code {
+  font-size: 48px;
+  line-height: 60px;
+}
+

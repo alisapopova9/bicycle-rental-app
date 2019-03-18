@@ -8,7 +8,7 @@
     <div class="lk__orders">
       <ul id="ordersList" class="ordersList">
         {{#orderList}}
-        <li class="order">
+        <li class="order" id="{{_id}}">
           <div class="bike__img-container">
             <img src="../images/{{bike.img}}" alt="" class="bike__img">
           </div>
@@ -24,7 +24,9 @@
                 Стоимость - {{totalCost}}
               </div>
             </div>
-            <a href="" id="backOrder-{{_id}}" class="button button_hovered button_link">Вернуть</a>
+            <div class="order__back-button">
+              <button data-order-id="{{_id}}" class="button button_hovered">Вернуть</button>
+            </div>
           </div>
         </li>
         {{/orderList}}
@@ -52,10 +54,11 @@
           {{^cardRequisites}}
           <div class="order-data-container">Нет данных</div>
           {{/cardRequisites}}
-          <a href="/card-requisites" class="button button_hovered button_link">Изменить</a>
+          <a href="/card-requisites" class="button button_hovered button_link button_change">Изменить</a>
         </div>
       </div>
     </div>
   </div>
 </div>
+<script src="../js/lk.js"></script>
 {{> footer}}

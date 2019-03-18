@@ -1,3 +1,25 @@
 {{> header}}
-	
+	<div class="lk">
+    <h3 class="section-header">Аренда велосипеда</h3>
+  </div>
+  <div class="order-container">
+      {{#bikeInfo}}
+    <div class="order-info">
+      <div class="bike__img-container">
+        <img src="../images/{{bikeInfo.img}}" class="bike__img">
+      </div>
+      <div class="order__about">
+        <div class="order__bike-name">
+          {{bikeInfo.name}}
+        </div>
+        <div class="order__text">
+          Чтобы забрать велосипед, введите код
+        </div>
+        <div class="order__code">
+          {{orderCode}}
+        </div>
+      </div>
+    </div>
+      {{/bikeInfo}}
+  </div>
 {{> footer}}
