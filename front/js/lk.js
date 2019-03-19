@@ -17,12 +17,10 @@ function removeItem(event) {
         if (!response.ok) {
           throw new Error(`Запрос завершился неуспешно: ${response.status} ${response.statusText}`);
         }
-        else {
-          const order = document.getElementById(id);
-          if (document.body.contains(order)) {
-            order.remove();
-            location.reload();
-          }
+        const order = document.getElementById(id);
+        if (document.body.contains(order)) {
+          order.remove();
+          location.reload();
         }
       })
       .catch(error => {

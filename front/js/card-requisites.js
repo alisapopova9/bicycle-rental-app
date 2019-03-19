@@ -207,9 +207,9 @@ function submitValidation(event) {
         if (!response.ok) {
           throw new Error(`Запрос завершился неуспешно: ${response.status} ${response.statusText}`);
         }
-        else {
-          window.location.href = document.referrer;
-        }
+        const queryParams = new URLSearchParams(window.location.search);
+        const backUrl = queryParams.get('back_url');
+        window.location.href = backUrl === null ? '/lk' : backUrl;
       })
       .catch(error => {
         console.error(error);

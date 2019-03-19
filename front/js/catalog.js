@@ -37,9 +37,7 @@ function loadCatalog(page) {
       if (response.ok) {
         return response.json();
       }
-      else {
         throw new Error('Запрос завершился неудачно');
-      }
     })
     .then(bikesList => {
       list = bikesList.bikesList;
